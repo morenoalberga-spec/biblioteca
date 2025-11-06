@@ -1,0 +1,28 @@
+{
+  "name": "biblioteca-app",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Sistema de gestión de biblioteca backend",
+  "main": "API/index.js",
+  "type": "module", <!-- Necesario para usar import/export en Node.js -->
+  "scripts": {
+    "start": "node API/index.js",
+    "dev": "nodemon API/index.js",
+    "build": "npm run build --prefix src", <!-- Opcional, si tienes un frontend en src que compilar -->
+    "frontend": "vite --config src/vite.config.js" <!-- Opcional, si usas Vite para el frontend en src -->
+  },
+  "keywords": ["biblioteca", "nodejs", "express", "mysql"],
+  "author": "Tu Nombre",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2", <!-- Usar versión estable, no 5.x alpha -->
+    "cors": "^2.8.5",
+    "mysql2": "^3.14.3", <!-- La misma versión que tenías -->
+    "dotenv": "^16.3.1", <!-- Usar versión estable, no 17.x -->
+    "bcryptjs": "^2.4.3", <!-- Añadir para hashing de contraseñas -->
+    "jsonwebtoken": "^9.0.2" <!-- Añadir para JWT -->
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10" <!-- Añadir para desarrollo, no en dependencias principales -->
+  }
+}
